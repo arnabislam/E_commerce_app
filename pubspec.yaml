@@ -24,6 +24,9 @@ flutter:
 
   assets:
     - assets/images/ui_design.jpg
+    - assets/images/online_shop.jpg
+    - assets/images/shop3.jpg
+    - assets/images/shop2.jpg
     - assets/logos/e_logo.png
 
 

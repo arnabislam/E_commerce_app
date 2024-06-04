@@ -47,11 +47,11 @@ class rDeviceUtils {
     return MediaQuery.of(Get.context!).padding.top;
   }
 
-  static double getBottomNavigationBArHeight(BuildContext context) {
+  static double getBottomNavigationBArHeight() {
     return kBottomNavigationBarHeight;
   }
 
-  static double getAppBarHeight(BuildContext context) {
+  static double getAppBarHeight() {
     return kToolbarHeight;
   }
 

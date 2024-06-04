@@ -68,6 +68,19 @@ class TheHelperFunctions {
     return MediaQuery.of(Get.context!).size.width;
   }
 
+  static double screenHeight(){
+    return MediaQuery.of(Get.context!).size.height;
+  }
+
+
+  static Size screenSize(){
+    return MediaQuery.of(Get.context!).size;
+  }
+
+  static bool isDarkMode(BuildContext,context){
+    return Theme.of(context).brightness==Brightness.dark;
+  }
+
   // static String getFormateDate(DateTime date, {String format = "dd mm yyyy "}){
   //      return  DateFormat(format).format(date);
   // }
