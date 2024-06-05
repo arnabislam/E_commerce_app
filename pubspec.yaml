@@ -27,6 +27,13 @@ flutter:
     - assets/images/online_shop.jpg
     - assets/images/shop3.jpg
     - assets/images/shop2.jpg
+    - assets/images/logo2.png
+    - assets/images/logo.png
+    - assets/images/google.png
+    - assets/images/facebook.png
+    - assets/images/verify_email.png
+    - assets/images/success.jpg
+    - assets/images/password_reset.png
     - assets/logos/e_logo.png
 
 

@@ -1,3 +1,4 @@
+import 'package:e_commerce/app/modules/auth/views/login.dart';
 import 'package:e_commerce/app/modules/home/views/home_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
@@ -18,7 +19,7 @@ class OnboardimgController extends GetxController {
 
   void nextpage() {
     if (currentPageIndex == 2) {
-      Get.to(HomeView());
+      Get.to(Login());
     } else {
       int page = currentPageIndex.value + 1;
       pageController.jumpToPage(page);
