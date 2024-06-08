@@ -1,4 +1,5 @@
 import 'package:e_commerce/app/modules/auth/views/signup_view.dart';
+import 'package:e_commerce/app/modules/home/views/navigation_menu_view.dart';
 import 'package:e_commerce/constant/imageString.dart';
 import 'package:e_commerce/device/helper_function.dart';
 import 'package:e_commerce/utils/size.dart';
@@ -102,7 +103,9 @@ class _LoginState extends State<Login> {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                          onPressed: () {}, child: Text("SignIn")),
+                          onPressed: () {
+                            Get.to(NavigationMenuView());
+                          }, child: Text("SignIn")),
                     ),
                     const SizedBox(
                       height: rSize.spaceBtwItems,
