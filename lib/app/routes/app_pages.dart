@@ -6,6 +6,8 @@ import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/onboardimg/bindings/onboardimg_binding.dart';
 import '../modules/onboardimg/views/onboardimg_view.dart';
+import '../modules/store/bindings/store_binding.dart';
+import '../modules/store/views/store_view.dart';
 
 part 'app_routes.dart';
 
@@ -29,6 +31,11 @@ class AppPages {
       name: _Paths.AUTH,
       page: () => const AuthView(),
       binding: AuthBinding(),
+    ),
+    GetPage(
+      name: _Paths.STORE,
+      page: () => const StoreView(),
+      binding: StoreBinding(),
     ),
   ];
 }

@@ -24,9 +24,14 @@ class rColors{
 
   //Button color
   static Color primaryButton=Color(0xff1666de);
-  static Color disabledButton=Color(0xff575753);
+  static Color disabledButton=Color(0xffe1dfdf);
   static Color secondaryButton=Colors.white;
 
+
+
+  static Color Darkgrey=Color(0xffE1DFDFFF);
+  static Color Black=Colors.black;
+  static Color darkGrey=Color(0xffE1E1E1FF);
 
 
 

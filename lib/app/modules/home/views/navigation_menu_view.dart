@@ -1,8 +1,11 @@
 import 'package:e_commerce/app/modules/home/views/home_view.dart';
+import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/wishlist.dart';
 import 'package:e_commerce/device/helper_function.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+
+import '../../store/views/store_view.dart';
 
 class NavigationMenuView extends GetView {
   const NavigationMenuView({Key? key}) : super(key: key);
@@ -43,8 +46,8 @@ class NavigationController extends GetxController {
 
   final screens = [
    HomeView(),
-    Container(color: Colors.black,),
-    Container(color: Colors.blue,),
+    StoreView(),
+    Wishlist(),
     Container(color: Colors.yellow,),
   ];
 }
