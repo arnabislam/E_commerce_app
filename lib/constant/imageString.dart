@@ -8,4 +8,7 @@ class rImageString{
 
 
   static const String onBoardingImage="assets/images/online_shop.jpg";
+  static const String productImage1="assets/images/sneakers.png";
+  static const String productImage2="assets/images/product.jpg";
+  static const String productImage3="assets/images/sport-shoe.png";
 }

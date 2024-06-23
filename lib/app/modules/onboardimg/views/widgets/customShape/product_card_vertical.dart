@@ -1,6 +1,8 @@
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/circular_container.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/product_title_text.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/rRoundedImage.dart';
+import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/rbrand_title_text.dart';
+import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/rbrandtitletext_with_verified_icon.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/rounded_container.dart';
 import 'package:e_commerce/constant/colors.dart';
 import 'package:e_commerce/device/helper_function.dart';
@@ -72,36 +74,20 @@ class rProductCardVertical extends StatelessWidget {
                     ],
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: rSize.sm),
+                const Padding(
+                  padding: EdgeInsets.only(left: rSize.sm),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const rProductTitleText(
+                      rProductTitleText(
                         title: 'Black Hilfiger shoes',
                         smallSize: true,
                       ),
-                      const SizedBox(
+                      SizedBox(
                         height: rSize.spaceBtwItems / 2,
                       ),
-                      Row(
-                        children: [
-                          Text(
-                            "Hilfiger",
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 1,
-                            style: Theme.of(context).textTheme.labelMedium,
-                          ),
-                          const SizedBox(
-                            width: rSize.sm,
-                          ),
-                          Icon(
-                            Icons.verified,
-                            color: Colors.green,
-                          )
-                        ],
-                      ),
+                    RbrandTitleTextWithIcon(title: "Hilfiger"),
                     ],
                   ),
                 ),
@@ -143,3 +129,4 @@ class rProductCardVertical extends StatelessWidget {
     );
   }
 }
+

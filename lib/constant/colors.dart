@@ -18,7 +18,7 @@ class rColors{
   //backgroundColor
 
   static Color dark=Color(0xff0f0f01);
-  static Color light=Color(0xff575753);
+  static Color light=Color(0xfffafaf3);
   static Color prinmarybackground=Color(0xfff5f5f0);
 
 
@@ -29,9 +29,9 @@ class rColors{
 
 
 
-  static Color Darkgrey=Color(0xffE1DFDFFF);
+  static Color Darkgrey=const Color(0xffe1dfdfff);
   static Color Black=Colors.black;
-  static Color darkGrey=Color(0xffE1E1E1FF);
+  static Color darkGrey=Color(0xffe1e1e1ff);
 
 
 

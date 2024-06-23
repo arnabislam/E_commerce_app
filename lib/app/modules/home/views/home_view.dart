@@ -13,6 +13,7 @@ import 'package:get/get.dart';
 
 import '../../onboardimg/views/widgets/customShape/caro_slider.dart';
 import '../../onboardimg/views/widgets/customShape/circular_container.dart';
+import '../../onboardimg/views/widgets/customShape/grid_layout.dart';
 import '../../onboardimg/views/widgets/customShape/primaryHeader.dart';
 import '../../onboardimg/views/widgets/customShape/product_card_vertical.dart';
 import '../../onboardimg/views/widgets/customShape/rRoundedImage.dart';
@@ -102,19 +103,7 @@ class HomeView extends GetView<HomeController> {
                     textColor: Colors.black,
                     showActionbutton: true,
                   ),
-                  GridView.builder(
-                    shrinkWrap: true,
-                    itemCount: 8,
-                    padding: EdgeInsets.zero,
-                    physics: NeverScrollableScrollPhysics(),
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                            mainAxisExtent: 288,
-                            mainAxisSpacing: rSize.gridViewSpacing,
-                            crossAxisSpacing: rSize.gridViewSpacing),
-                    itemBuilder: (_, index) => rProductCardVertical(),
-                  )
+                  rGridLayout(itemCount: 4, itemBuilder: (_,index ) =>rProductCardVertical())
                   //  rProductCardVertical()
                 ],
               ),
@@ -125,3 +114,4 @@ class HomeView extends GetView<HomeController> {
     );
   }
 }
+
