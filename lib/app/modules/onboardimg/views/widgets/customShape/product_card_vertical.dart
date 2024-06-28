@@ -36,6 +36,7 @@ class rProductCardVertical extends StatelessWidget {
               color: dark ? rColors.darkGrey : rColors.textWhite,
             ),
             child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 rRoundedContainer(
                   height: 180,
@@ -75,10 +76,10 @@ class rProductCardVertical extends StatelessWidget {
                   ),
                 ),
                 const Padding(
-                  padding: EdgeInsets.only(left: rSize.sm),
+                  padding: EdgeInsets.only(left:rSize.sm),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
+
                     children: [
                       rProductTitleText(
                         title: 'Black Hilfiger shoes',

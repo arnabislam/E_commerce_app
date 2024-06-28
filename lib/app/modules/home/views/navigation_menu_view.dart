@@ -1,5 +1,6 @@
 import 'package:e_commerce/app/modules/home/views/home_view.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/wishlist.dart';
+import 'package:e_commerce/app/modules/personalization/views/settings_view.dart';
 import 'package:e_commerce/device/helper_function.dart';
 import 'package:flutter/material.dart';
 
@@ -47,7 +48,7 @@ class NavigationController extends GetxController {
   final screens = [
    HomeView(),
     StoreView(),
-    Wishlist(),
-    Container(color: Colors.yellow,),
+  Wishlist(),
+    SettingsView()
   ];
 }

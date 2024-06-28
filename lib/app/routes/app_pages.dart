@@ -6,8 +6,12 @@ import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/onboardimg/bindings/onboardimg_binding.dart';
 import '../modules/onboardimg/views/onboardimg_view.dart';
+import '../modules/personalization/bindings/personalization_binding.dart';
+import '../modules/personalization/views/personalization_view.dart';
 import '../modules/store/bindings/store_binding.dart';
 import '../modules/store/views/store_view.dart';
+import '../modules/wishlist/bindings/wishlist_binding.dart';
+import '../modules/wishlist/views/wishlist_view.dart';
 
 part 'app_routes.dart';
 
@@ -36,6 +40,16 @@ class AppPages {
       name: _Paths.STORE,
       page: () => const StoreView(),
       binding: StoreBinding(),
+    ),
+    GetPage(
+      name: _Paths.WISHLIST,
+      page: () => const WishlistView(),
+      binding: WishlistBinding(),
+    ),
+    GetPage(
+      name: _Paths.PERSONALIZATION,
+      page: () => const PersonalizationView(),
+      binding: PersonalizationBinding(),
     ),
   ];
 }
