@@ -65,6 +65,7 @@ class HomeView extends GetView<HomeController> {
                       ),
                       SizedBox(
                         height: 80,
+
                         child: ListView.builder(
                             shrinkWrap: true,
                             itemCount: 15,

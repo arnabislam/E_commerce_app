@@ -11,7 +11,7 @@ class rCircularImage extends StatelessWidget {
      this.width=56,
      this.padding=rSize.sm,
     this.overlayColor,
-    required this.backgroundColour,
+   this.backgroundColour=Colors.blue,
     this.isNetworkImage=false,
     required this.image,
     this.fit=BoxFit.cover,

@@ -15,7 +15,7 @@ class rPrimaryContainer extends StatelessWidget {
           padding: EdgeInsets.all(0),
           color: rColors.primary,
           child: SizedBox(
-            height: 400,
+            //height: MediaQuery.sizeOf(context).height/4,
             child: Stack(children: [
               Positioned(
                   top: -150,

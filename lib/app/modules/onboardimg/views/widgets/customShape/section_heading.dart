@@ -3,7 +3,7 @@ import 'package:e_commerce/device/helper_function.dart';
 import 'package:flutter/material.dart';
 class rSectionHeading extends StatelessWidget {
   const rSectionHeading({
-    super.key, required this.title,  required this.buttonTitle, this.textColor, this.showActionbutton=false, this.onPressed,
+    super.key, required this.title,   this.buttonTitle="view all", this.textColor, this.showActionbutton=false, this.onPressed,
   });
   final String title,buttonTitle;
   final  Color?textColor;
