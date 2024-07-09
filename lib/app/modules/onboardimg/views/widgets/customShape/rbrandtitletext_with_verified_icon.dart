@@ -4,8 +4,8 @@ import 'package:e_commerce/constant/enums.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../utils/size.dart';
-class RbrandTitleTextWithIcon extends StatelessWidget {
-  const RbrandTitleTextWithIcon({
+class rbrandTitleTextWithIcon extends StatelessWidget {
+  const rbrandTitleTextWithIcon({
     super.key, required this.title,
      this.maxLines=1,
     this.textColor,
@@ -37,6 +37,7 @@ final TextSizes brandTextSize;
         const Icon(
           Icons.verified,
           color: Colors.green,
+          size: 14,
         )
       ],
     );

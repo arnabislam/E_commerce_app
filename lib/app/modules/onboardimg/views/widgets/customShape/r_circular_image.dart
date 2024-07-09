@@ -28,8 +28,8 @@ class rCircularImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 56,
-      width: 56,
+      height: height,
+      width: width,
       padding: EdgeInsets.all(padding),
       decoration: BoxDecoration(
           color: dark ? rColors.dark : rColors.prinmarybackground,

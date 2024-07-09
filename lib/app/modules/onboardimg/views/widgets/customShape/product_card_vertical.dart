@@ -4,6 +4,7 @@ import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/rRou
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/rbrand_title_text.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/rbrandtitletext_with_verified_icon.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/rounded_container.dart';
+import 'package:e_commerce/app/modules/shop/views/product_details_view.dart';
 import 'package:e_commerce/constant/colors.dart';
 import 'package:e_commerce/device/helper_function.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +24,7 @@ class rProductCardVertical extends StatelessWidget {
     final dark = TheHelperFunctions.isDarkMode(BuildContext, context);
     return GestureDetector(
       onTap: () {
-        print("arnab");
+        Get.to(ProductDetailsView());
       },
       child: Column(
         children: [
@@ -68,7 +69,7 @@ class rProductCardVertical extends StatelessWidget {
                           top: 0,
                           right: 0,
                           child: rCircularIcon(
-                            dark: dark,
+
                             icon: Icons.heart_broken_rounded,
                             color: Colors.red,
                           ))
@@ -88,7 +89,7 @@ class rProductCardVertical extends StatelessWidget {
                       SizedBox(
                         height: rSize.spaceBtwItems / 2,
                       ),
-                    RbrandTitleTextWithIcon(title: "Hilfiger"),
+                    rbrandTitleTextWithIcon(title: "Hilfiger"),
                     ],
                   ),
                 ),

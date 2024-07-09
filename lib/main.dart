@@ -13,6 +13,7 @@ void main() {
 
 
     GetMaterialApp(
+      debugShowCheckedModeBanner: false,
      themeMode: ThemeMode.system,
       theme: rAppTheme.lightTheme,
       darkTheme: rAppTheme.darkTheme,

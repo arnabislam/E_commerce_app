@@ -22,7 +22,7 @@ class rSectionHeading extends StatelessWidget {
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),
-        if(showActionbutton)  TextButton(onPressed: onPressed, child: Text(buttonTitle,style:TextStyle(color:  dark?rColors.light:rColors.dark),))
+        if(showActionbutton)  TextButton(onPressed: onPressed, child: Text(buttonTitle,style:TextStyle(color:  dark?rColors.light:rColors.grey),))
       ],
     );
   }

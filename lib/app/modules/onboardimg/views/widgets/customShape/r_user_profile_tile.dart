@@ -3,14 +3,17 @@ import 'package:flutter/material.dart';
 class rUserProfileTile extends StatelessWidget {
   const rUserProfileTile({
     super.key,
-    required this.dark,
+    required this.dark, this.onPressed,
+
   });
 
   final bool dark;
+  final VoidCallback?onPressed;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
+     // onTap: onPressed,
       leading: rCircularImage(
         dark: dark,
         image: "assets/images/profile.png",
@@ -32,7 +35,7 @@ class rUserProfileTile extends StatelessWidget {
             .bodyMedium!
             .apply(color: Colors.white),
       ),
-      trailing: IconButton(onPressed: (){}, icon: Icon(Icons.edit_calendar_outlined,color: Colors.white,)),
+      trailing: IconButton(onPressed: onPressed, icon: Icon(Icons.edit_calendar_outlined,color: Colors.white,)),
     );
   }
 }

@@ -8,6 +8,8 @@ import '../modules/onboardimg/bindings/onboardimg_binding.dart';
 import '../modules/onboardimg/views/onboardimg_view.dart';
 import '../modules/personalization/bindings/personalization_binding.dart';
 import '../modules/personalization/views/personalization_view.dart';
+import '../modules/shop/bindings/shop_binding.dart';
+import '../modules/shop/views/shop_view.dart';
 import '../modules/store/bindings/store_binding.dart';
 import '../modules/store/views/store_view.dart';
 import '../modules/wishlist/bindings/wishlist_binding.dart';
@@ -50,6 +52,11 @@ class AppPages {
       name: _Paths.PERSONALIZATION,
       page: () => const PersonalizationView(),
       binding: PersonalizationBinding(),
+    ),
+    GetPage(
+      name: _Paths.SHOP,
+      page: () => const ShopView(),
+      binding: ShopBinding(),
     ),
   ];
 }

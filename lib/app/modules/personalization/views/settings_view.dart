@@ -1,6 +1,8 @@
+import 'package:e_commerce/app/modules/home/views/home_view.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/primaryHeader.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/r_circular_image.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/section_heading.dart';
+import 'package:e_commerce/app/modules/personalization/views/profile_view.dart';
 import 'package:e_commerce/constant/colors.dart';
 import 'package:e_commerce/device/helper_function.dart';
 import 'package:e_commerce/utils/appbar.dart';
@@ -36,42 +38,95 @@ class SettingsView extends GetView {
               const SizedBox(
                 height: rSize.spaceBtwItems,
               ),
-              rUserProfileTile(dark: dark),
-
-
-              
+              rUserProfileTile(dark: dark,onPressed: (){
+                Get.to(ProfileView());
+              },),
+              SizedBox(height: rSize.spaceBtwSections,)
             ],
           )),
-           Padding(padding: EdgeInsets.all(rSize.defaultSpace),
-            child: Column(children: [
-              rSectionHeading(title: "Accounrt Settings",showActionbutton: false,),
-              SizedBox(height: rSize.spaceBtwSections,),
+          Padding(
+            padding: EdgeInsets.all(rSize.defaultSpace),
+            child: Column(
+              children: [
+                const rSectionHeading(
+                  title: "Account Settings",
+                  showActionbutton: false,
+                ),
+                const SizedBox(
+                  height: rSize.spaceBtwSections,
+                ),
 
-              //account settings
-              const rSettingsmenuTile(icon: Icons.home_outlined, title: 'My Address',subtitle: 'Set shopping delivery address',),
-              const rSettingsmenuTile(icon: Icons.shopping_cart, title: 'My Cart',subtitle: 'Add remove products,add move to check',),
-              const rSettingsmenuTile(icon: Icons.delete_outline_outlined, title: 'My Orders',subtitle: 'In progress and Completed orders',),
-              const rSettingsmenuTile(icon: Icons.food_bank_outlined, title: 'Bank Account',subtitle: 'Withdraw balance and regitered bank account',),
-              const rSettingsmenuTile(icon: Icons.settings_brightness, title: 'My Coupons',subtitle: 'List of all discount coupons',),
-              const rSettingsmenuTile(icon: Icons.notification_important, title: 'Notifications',subtitle: 'Set any kinds of notifications message',),
-              const rSettingsmenuTile(icon: Icons.security, title: 'Account privacy',subtitle: 'Manage data usages and connected accounts',),
+                //account settings
+                const rSettingsmenuTile(
+                  icon: Icons.home_outlined,
+                  title: 'My Address',
+                  subtitle: 'Set shopping delivery address',
+                ),
+                const rSettingsmenuTile(
+                  icon: Icons.shopping_cart,
+                  title: 'My Cart',
+                  subtitle: 'Add remove products,add move to check',
+                ),
+                const rSettingsmenuTile(
+                  icon: Icons.delete_outline_outlined,
+                  title: 'My Orders',
+                  subtitle: 'In progress and Completed orders',
+                ),
+                const rSettingsmenuTile(
+                  icon: Icons.food_bank_outlined,
+                  title: 'Bank Account',
+                  subtitle: 'Withdraw balance and regitered bank account',
+                ),
+                const rSettingsmenuTile(
+                  icon: Icons.settings_brightness,
+                  title: 'My Coupons',
+                  subtitle: 'List of all discount coupons',
+                ),
+                const rSettingsmenuTile(
+                  icon: Icons.notification_important,
+                  title: 'Notifications',
+                  subtitle: 'Set any kinds of notifications message',
+                ),
+                const rSettingsmenuTile(
+                  icon: Icons.security,
+                  title: 'Account privacy',
+                  subtitle: 'Manage data usages and connected accounts',
+                ),
 //app settings
-              const SizedBox(height: rSize.spaceBtwSections,),
-              const rSectionHeading(title: "Accounrt Settings",showActionbutton: false,),
-              const SizedBox(height: rSize.spaceBtwItems,),
+                const SizedBox(
+                  height: rSize.spaceBtwSections,
+                ),
+                const rSectionHeading(
+                  title: "Accounrt Settings",
+                  showActionbutton: false,
+                ),
+                const SizedBox(
+                  height: rSize.spaceBtwItems,
+                ),
 
-
-              rSettingsmenuTile(icon: Icons.dataset_linked, title: 'Load data',subtitle: 'Upload data to your cloud firebase',trailing: Switch(value: true, onChanged:(value){}),),
-              rSettingsmenuTile(icon: Icons.location_on_outlined, title: 'Safe mode',subtitle: 'Search result is safe for all ages',trailing: Switch(value: true, onChanged:(value){}),),
-              rSettingsmenuTile(icon: Icons.security, title: 'Hd image Quality',subtitle: 'Set image quality to be seen',trailing: Switch(value: true, onChanged:(value){}),),
-
-            ],),
+                rSettingsmenuTile(
+                  icon: Icons.dataset_linked,
+                  title: 'Load data',
+                  subtitle: 'Upload data to your cloud firebase',
+                  trailing: Switch(value: true, onChanged: (value) {}),
+                ),
+                rSettingsmenuTile(
+                  icon: Icons.location_on_outlined,
+                  title: 'Safe mode',
+                  subtitle: 'Search result is safe for all ages',
+                  trailing: Switch(value: true, onChanged: (value) {}),
+                ),
+                rSettingsmenuTile(
+                  icon: Icons.security,
+                  title: 'Hd image Quality',
+                  subtitle: 'Set image quality to be seen',
+                  trailing: Switch(value: true, onChanged: (value) {}),
+                ),
+              ],
+            ),
           )
         ],
       ),
     ));
   }
 }
-
-
-
