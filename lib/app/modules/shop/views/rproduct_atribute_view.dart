@@ -84,7 +84,7 @@ class rProductAtributeView extends GetView {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: rSize.spaceBtwItems,
         ),
 
@@ -94,10 +94,10 @@ class rProductAtributeView extends GetView {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                rSectionHeading(
+                const rSectionHeading(
                   title: "Colors",
                 ),
-                SizedBox(
+                const SizedBox(
                   height: rSize.spaceBtwItems / 2,
                 ),
                 Wrap(
@@ -119,10 +119,10 @@ class rProductAtributeView extends GetView {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                rSectionHeading(
+                const rSectionHeading(
                   title: "Size",
                 ),
-                SizedBox(
+                const SizedBox(
                   height: rSize.spaceBtwItems / 2,
                 ),
                 Wrap(

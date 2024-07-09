@@ -99,9 +99,7 @@ class ProductDetailsView extends GetView {
                         ),
                       ],
                     ),
-                    const SizedBox(
-                      height: rSize.spaceBtwSections,
-                    ),
+
                   ],
                 ),
               )
@@ -118,11 +116,11 @@ class rBottomAddToCart extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = TheHelperFunctions.isDarkMode(BuildContext, context);
     return Container(
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
           horizontal: rSize.defaultSpace, vertical: rSize.defaultSpace / 2),
       decoration: BoxDecoration(
           color: dark ? rColors.darkGrey : rColors.light,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
               topRight: Radius.circular(rSize.cardRadiusLg),
               topLeft: Radius.circular(rSize.cardRadiusLg))),
       child: Row(
@@ -162,10 +160,10 @@ class rBottomAddToCart extends StatelessWidget {
           ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.all(rSize.md),
+                  padding: const EdgeInsets.all(rSize.md),
                   backgroundColor: rColors.Black,
-                  side: BorderSide(color: Colors.black)),
-              child: Text("Add to cart"))
+                  side: const BorderSide(color: Colors.black)),
+              child: const Text("Add to cart"))
         ],
       ),
     );
