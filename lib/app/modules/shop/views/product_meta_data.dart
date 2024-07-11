@@ -75,7 +75,7 @@ class rProductMetaData extends StatelessWidget {
 Row(
   children: [
     rCircularImage(dark: dark, image: "assets/images/sport-shoe.png",width: 32,height: 32,overlayColor: dark?Colors.white:Colors.black,),
-    rbrandTitleTextWithIcon(title: "Nike",brandTextSize: TextSizes.medium,),
+    rbrandTitleTextWithVerificationIcon(title: "Nike",brandTextSize: TextSizes.medium,),
   ],
 )
       ],

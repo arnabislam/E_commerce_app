@@ -89,7 +89,7 @@ class rProductCardVertical extends StatelessWidget {
                       SizedBox(
                         height: rSize.spaceBtwItems / 2,
                       ),
-                    rbrandTitleTextWithIcon(title: "Hilfiger"),
+                    rbrandTitleTextWithVerificationIcon(title: "Hilfiger"),
                     ],
                   ),
                 ),

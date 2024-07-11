@@ -42,7 +42,7 @@ class rbrand_card extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const rbrandTitleTextWithIcon(title: "Hilfiger",brandTextSize: TextSizes.large,),
+                  const rbrandTitleTextWithVerificationIcon(title: "Hilfiger",brandTextSize: TextSizes.large,),
                   Text("250 products hfgvh hgv",overflow: TextOverflow.ellipsis,
                     style: Theme.of(context).textTheme.labelMedium,)
                 ],

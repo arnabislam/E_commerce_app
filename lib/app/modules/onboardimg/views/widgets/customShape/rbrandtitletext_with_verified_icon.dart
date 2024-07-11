@@ -4,8 +4,8 @@ import 'package:e_commerce/constant/enums.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../utils/size.dart';
-class rbrandTitleTextWithIcon extends StatelessWidget {
-  const rbrandTitleTextWithIcon({
+class rbrandTitleTextWithVerificationIcon extends StatelessWidget {
+  const rbrandTitleTextWithVerificationIcon({
     super.key, required this.title,
      this.maxLines=1,
     this.textColor,

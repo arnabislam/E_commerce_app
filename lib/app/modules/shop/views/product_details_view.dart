@@ -2,6 +2,7 @@ import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/circ
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/rRoundedImage.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/section_heading.dart';
 import 'package:e_commerce/app/modules/review/views/review_view.dart';
+import 'package:e_commerce/app/modules/shop/cart.dart';
 import 'package:e_commerce/app/modules/shop/views/product_meta_data.dart';
 import 'package:e_commerce/app/modules/shop/views/rProductImageSlider.dart';
 import 'package:e_commerce/app/modules/shop/views/rating_share.dart';
@@ -52,7 +53,9 @@ class ProductDetailsView extends GetView {
                     SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
-                            onPressed: () {}, child: Text("Checkout"))),
+                            onPressed: () {
+                              Get.to(CartScreen());
+                            }, child: Text("Checkout"))),
                     const SizedBox(
                       height: rSize.spaceBtwSections,
                     ),
