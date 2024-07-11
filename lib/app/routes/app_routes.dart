@@ -10,6 +10,8 @@ abstract class Routes {
   static const WISHLIST = _Paths.WISHLIST;
   static const PERSONALIZATION = _Paths.PERSONALIZATION;
   static const SHOP = _Paths.SHOP;
+  static const REVIEW = _Paths.REVIEW;
+  static const ADDRESS = _Paths.ADDRESS;
 }
 
 abstract class _Paths {
@@ -21,4 +23,6 @@ abstract class _Paths {
   static const WISHLIST = '/wishlist';
   static const PERSONALIZATION = '/personalization';
   static const SHOP = '/shop';
+  static const REVIEW = '/review';
+  static const ADDRESS = '/address';
 }

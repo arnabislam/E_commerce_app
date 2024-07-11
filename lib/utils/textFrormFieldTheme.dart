@@ -38,11 +38,11 @@ class rTextFormFieldTheme {
     errorMaxLines: 3,
     prefixIconColor: Colors.grey,
     suffixIconColor: Colors.grey,
-    labelStyle: TextStyle().copyWith(color: Colors.black, fontSize: 14),
-    hintStyle: TextStyle().copyWith(color: Colors.black, fontSize: 14),
+    labelStyle: TextStyle().copyWith(color: Colors.white, fontSize: 14),
+    hintStyle: TextStyle().copyWith(color: Colors.white, fontSize: 14),
     errorStyle: TextStyle().copyWith(fontStyle: FontStyle.normal),
     floatingLabelStyle:
-        TextStyle().copyWith(color: Colors.black.withOpacity(0.0)),
+        TextStyle().copyWith(color: Colors.white.withOpacity(0.0)),
     border: OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
       borderSide: BorderSide(width: 1, color: Colors.grey),

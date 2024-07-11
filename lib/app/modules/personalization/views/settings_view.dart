@@ -1,3 +1,4 @@
+import 'package:e_commerce/app/modules/address/views/address_view.dart';
 import 'package:e_commerce/app/modules/home/views/home_view.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/primaryHeader.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/r_circular_image.dart';
@@ -57,10 +58,13 @@ class SettingsView extends GetView {
                 ),
 
                 //account settings
-                const rSettingsmenuTile(
+                 rSettingsmenuTile(
                   icon: Icons.home_outlined,
                   title: 'My Address',
                   subtitle: 'Set shopping delivery address',
+                  onTap: (){
+                    Get.to(AddressView());
+                  },
                 ),
                 const rSettingsmenuTile(
                   icon: Icons.shopping_cart,

@@ -1,6 +1,7 @@
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/circular_icon.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/rRoundedImage.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/section_heading.dart';
+import 'package:e_commerce/app/modules/review/views/review_view.dart';
 import 'package:e_commerce/app/modules/shop/views/product_meta_data.dart';
 import 'package:e_commerce/app/modules/shop/views/rProductImageSlider.dart';
 import 'package:e_commerce/app/modules/shop/views/rating_share.dart';
@@ -91,7 +92,9 @@ class ProductDetailsView extends GetView {
                           showActionbutton: false,
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.to(ReviewView());
+                          },
                           icon: const Icon(
                             Icons.arrow_forward_ios,
                             size: 18,

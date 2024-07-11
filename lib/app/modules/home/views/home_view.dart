@@ -72,10 +72,10 @@ class HomeView extends GetView<HomeController> {
                             scrollDirection: Axis.horizontal,
                             itemBuilder: (_, index) {
                               return rVerticalImageText(
-                                image: 'assets/images/sport-shoe.png',
+                                image: 'assets/images/sneakers.png',
                                 title: "shoes",
                                 onpressed: () {},
-                                backgrondColor: Colors.white,
+                                backgrondColor: Colors.blue,
                               );
                             }),
                       ),

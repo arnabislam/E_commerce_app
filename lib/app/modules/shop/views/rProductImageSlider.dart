@@ -7,17 +7,15 @@ import '../../../../utils/appbar.dart';
 import '../../../../utils/size.dart';
 import '../../onboardimg/views/widgets/customShape/circular_icon.dart';
 import '../../onboardimg/views/widgets/customShape/rRoundedImage.dart';
+
 class rProductImageSlider extends StatelessWidget {
   const rProductImageSlider({
     super.key,
-
   });
-
-
 
   @override
   Widget build(BuildContext context) {
-    final dark=TheHelperFunctions.isDarkMode(BuildContext, context);
+    final dark = TheHelperFunctions.isDarkMode(BuildContext, context);
     return Container(
       color: dark ? rColors.darkGrey : rColors.light,
       child: Stack(
@@ -28,10 +26,10 @@ class rProductImageSlider extends StatelessWidget {
               padding: EdgeInsets.all(rSize.productImageRadius * 2),
               child: Center(
                   child: Image(
-                    image: AssetImage(
-                      "assets/images/product.jpg",
-                    ),
-                  )),
+                image: AssetImage(
+                  "assets/images/product.jpg",
+                ),
+              )),
             ),
           ),
 
@@ -51,8 +49,7 @@ class rProductImageSlider extends StatelessWidget {
                 itemBuilder: (_, index) => rRoundedImage(
                   imageUrl: rImageString.productImage1,
                   width: 80,
-                  backgroundColor:
-                  dark ? rColors.dark : rColors.textWhite,
+                  backgroundColor: dark ? rColors.dark : rColors.textWhite,
                   border: Border.all(color: rColors.primary),
                 ),
                 separatorBuilder: (_, __) => SizedBox(
@@ -65,7 +62,6 @@ class rProductImageSlider extends StatelessWidget {
             showBackArrow: true,
             actions: [
               rCircularIcon(
-
                 icon: Icons.heart_broken_rounded,
                 color: Colors.red,
               )
