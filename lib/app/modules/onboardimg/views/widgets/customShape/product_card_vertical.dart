@@ -68,6 +68,7 @@ class rProductCardVertical extends StatelessWidget {
                       Positioned(
                           top: 0,
                           right: 0,
+
                           child: rCircularIcon(
 
                             icon: Icons.heart_broken_rounded,

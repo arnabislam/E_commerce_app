@@ -13,26 +13,29 @@ class AddressView extends GetView<AddressController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      floatingActionButton: FloatingActionButton(onPressed: (){
-        Get.to(AddNewAddress());
-      },backgroundColor: rColors.primary,
-      
-child: Icon(Icons.add,color: Colors.white,),
-      ),
-      appBar: AppBar(
-        title: const Text('Address'),
-
-      ),
-      body: SingleChildScrollView(
-        child: Padding(padding: EdgeInsets.all(rSize.spaceBtwItems),
-        child: Column(children: [
-          rSingleAddress(selectedAddress: false),
-          rSingleAddress(selectedAddress: true),
-        ],),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Get.to(AddNewAddress());
+          },
+          backgroundColor: rColors.primary,
+          child: const Icon(
+            Icons.add,
+            color: Colors.white,
+          ),
         ),
-
-      )
-    );
+        appBar: AppBar(
+          title: const Text('Address'),
+        ),
+        body: const SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.all(rSize.spaceBtwItems),
+            child: Column(
+              children: [
+                rSingleAddress(selectedAddress: false),
+                rSingleAddress(selectedAddress: true),
+              ],
+            ),
+          ),
+        ));
   }
 }

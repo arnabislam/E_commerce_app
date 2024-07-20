@@ -43,7 +43,7 @@ class rSingleAddress extends StatelessWidget {
               
 
               Text(
-                "Saiful Isklam",
+                "Saiful Islam",
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.titleLarge,

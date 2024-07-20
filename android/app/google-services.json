@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "205811706507",
+    "project_id": "new-ecommerce-d3df4",
+    "storage_bucket": "new-ecommerce-d3df4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205811706507:android:080efa95117a62f31a428e",
+        "android_client_info": {
+          "package_name": "sheikhit.net.e_commerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "205811706507-daeq50abtstca1sncimr9na43a6shtbo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sheikhit.net.e_commerce",
+            "certificate_hash": "28be53b35fb6b33ad9db26dd01a9eb697d5ea6ea"
+          }
+        },
+        {
+          "client_id": "205811706507-74uvdobs14t6o5lgr2a66oogfainj7hp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7v-FOWD5uzpeauI8QIPJhvZqAwtN-UiQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "205811706507-74uvdobs14t6o5lgr2a66oogfainj7hp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "205811706507-0tlqgn0902jhdn0vkdh4m735kqaidbi5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "sheikhit.net.eCommerce"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

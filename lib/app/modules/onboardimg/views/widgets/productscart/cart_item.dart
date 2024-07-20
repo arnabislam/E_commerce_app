@@ -16,12 +16,18 @@ class rCartItem extends StatelessWidget {
     return Row(
       children: [
         rRoundedImage(
-          imageUrl: "assets/images/product.jpg",
+
+
+
+
+
+         imageUrl: "assets/images/product.jpg",
           height: 60,
           width: 60,
           backgroundColor: TheHelperFunctions.isDarkMode(
               BuildContext, context)?rColors.darkGrey:rColors.light,
         ),
+
         SizedBox(width: rSize.spaceBtwItems,),
         Expanded(
           child: Column(

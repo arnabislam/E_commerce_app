@@ -1,3 +1,4 @@
+import 'package:e_commerce/app/modules/brand/allBrand.dart';
 import 'package:e_commerce/app/modules/home/views/home_view.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/category_tab.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/rounded_container.dart';
@@ -82,7 +83,9 @@ class _StoreViewState extends State<StoreView> {
                         rSectionHeading(
                           showActionbutton: true,
                           title: "Features Brand",
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.to(Allbrand());
+                          },
                           buttonTitle: "view all",
                         ),
                         const SizedBox(

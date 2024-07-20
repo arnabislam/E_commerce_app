@@ -9,7 +9,7 @@ class rRoundedImage extends StatelessWidget {
      this. applyImageRadius=true,
      this.backgroundColor=Colors.white,
     this.border,
-    this.fit,
+    this.fit=BoxFit.fill,
      this.isNetworkImage=false,
     this.onPressed,
      this.borderRadius=rSize.md,

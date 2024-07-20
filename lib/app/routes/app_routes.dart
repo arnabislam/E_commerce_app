@@ -12,6 +12,12 @@ abstract class Routes {
   static const SHOP = _Paths.SHOP;
   static const REVIEW = _Paths.REVIEW;
   static const ADDRESS = _Paths.ADDRESS;
+  static const CHACKOUT = _Paths.CHACKOUT;
+  static const CHECKOUT = _Paths.CHECKOUT;
+  static const ORDER = _Paths.ORDER;
+  static const SUBCATGORIES = _Paths.SUBCATGORIES;
+  static const ALL_PRODUCT = _Paths.ALL_PRODUCT;
+  static const BRAND = _Paths.BRAND;
 }
 
 abstract class _Paths {
@@ -25,4 +31,10 @@ abstract class _Paths {
   static const SHOP = '/shop';
   static const REVIEW = '/review';
   static const ADDRESS = '/address';
+  static const CHACKOUT = '/chackout';
+  static const CHECKOUT = '/checkout';
+  static const ORDER = '/order';
+  static const SUBCATGORIES = '/subcatgories';
+  static const ALL_PRODUCT = '/all-product';
+  static const BRAND = '/brand';
 }

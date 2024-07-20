@@ -1,5 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:e_commerce/app/modules/all_product/views/all_product_view.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/curved_edges.dart';
+import 'package:e_commerce/app/modules/subcatgories/views/subcatgories_view.dart';
 import 'package:e_commerce/constant/colors.dart';
 import 'package:e_commerce/device/helper_function.dart';
 import 'package:e_commerce/utils/appbar.dart';
@@ -74,7 +76,9 @@ class HomeView extends GetView<HomeController> {
                               return rVerticalImageText(
                                 image: 'assets/images/sneakers.png',
                                 title: "shoes",
-                                onpressed: () {},
+                                onpressed: () {
+                                  Get.to(SubcatgoriesView());
+                                },
                                 backgrondColor: Colors.blue,
                               );
                             }),
@@ -98,13 +102,17 @@ class HomeView extends GetView<HomeController> {
                   const SizedBox(
                     height: rSize.spaceBtwSections,
                   ),
-                  const rSectionHeading(
+                   rSectionHeading(
                     title: "Popular Products",
                     buttonTitle: "view all",
                     textColor: Colors.black,
                     showActionbutton: true,
+                    onPressed: (){
+                      Get.to(AllProductView());
+                    },
                   ),
-                  rGridLayout(itemCount: 4, itemBuilder: (_,index ) =>rProductCardVertical())
+                  rGridLayout(itemCount: 4, itemBuilder: (_,index ) =>rProductCardVertical()),
+
                   //  rProductCardVertical()
                 ],
               ),

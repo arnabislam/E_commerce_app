@@ -3,6 +3,7 @@ import 'package:e_commerce/app/modules/home/views/home_view.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/primaryHeader.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/r_circular_image.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/section_heading.dart';
+import 'package:e_commerce/app/modules/order/views/order_view.dart';
 import 'package:e_commerce/app/modules/personalization/views/profile_view.dart';
 import 'package:e_commerce/constant/colors.dart';
 import 'package:e_commerce/device/helper_function.dart';
@@ -35,6 +36,7 @@ class SettingsView extends GetView {
                       .headlineMedium
                       ?.apply(color: Colors.white),
                 ),
+                showBackArrow: true,
               ),
               const SizedBox(
                 height: rSize.spaceBtwItems,
@@ -71,7 +73,8 @@ class SettingsView extends GetView {
                   title: 'My Cart',
                   subtitle: 'Add remove products,add move to check',
                 ),
-                const rSettingsmenuTile(
+                 rSettingsmenuTile(
+                  onTap: (){Get.to(OrderView());},
                   icon: Icons.delete_outline_outlined,
                   title: 'My Orders',
                   subtitle: 'In progress and Completed orders',
