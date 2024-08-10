@@ -77,7 +77,7 @@ class TheHelperFunctions {
     return MediaQuery.of(Get.context!).size;
   }
 
-  static bool isDarkMode(BuildContext,context){
+  static bool isDarkMode(_,context){
     return Theme.of(context).brightness==Brightness.dark;
   }
 

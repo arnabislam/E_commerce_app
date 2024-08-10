@@ -1,7 +1,9 @@
 import 'package:e_commerce/app/modules/auth/views/login.dart';
 import 'package:e_commerce/app/modules/home/views/home_view.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
 class OnboardimgController extends GetxController {
   //TODO: Implement OnboardimgController
@@ -19,7 +21,23 @@ class OnboardimgController extends GetxController {
 
   void nextpage() {
     if (currentPageIndex == 2) {
-      Get.to(Login());
+
+    final storage=GetStorage();
+
+
+    if(kDebugMode){
+      print("Bangladesh next");
+      print(storage.read("IsFirstTime"));
+    }
+
+
+    storage.write("IsFirstTime", false);
+
+    if(kDebugMode){
+      print("Bangladesh next");
+      print(storage.read("IsFirstTime"));
+    }
+      Get.offAll(Login());
     } else {
       int page = currentPageIndex.value + 1;
       pageController.jumpToPage(page);
