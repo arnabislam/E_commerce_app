@@ -47,7 +47,7 @@ class AuthenticationDemo{
         required String password,
       }
       )async {
-    String res='Some error ocured';
+    String res='Some error occured';
     try {
       if(email.isNotEmpty || password.isNotEmpty){
         ///login user with email & password
