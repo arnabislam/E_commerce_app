@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_commerce/app/modules/checkout/views/checkout_view.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/circular_icon.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/product_title_text.dart';
@@ -22,15 +23,43 @@ class CartScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Cart"),
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(rSize.defaultSpace),
-        child: rCartItemCheckout(),
+      body: Column(
+        children: [
+          //colum bad ditey hobey
+          StreamBuilder(
+            stream: FirebaseFirestore.instance.collection("frick").snapshots(),
+            builder: (BuildContext context, AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>> snapshot) {
+              if(snapshot.hasError){
+                return Center(child: CircularProgressIndicator(),);
+              }
+              if(snapshot.connectionState== ConnectionState.waiting){
+                return Center(child: CircularProgressIndicator(),);
+              }
+              return ListView.builder(
+                  shrinkWrap: true,
+                  primary: false,
+                  itemCount: snapshot.data!.docs.length,
+                  itemBuilder: (context,index){
+                    var doc = snapshot.data!.docs[index];
+                    return Text(doc['name']);
+                  });
+            },
+          ),
+          
+          const Padding(
+            padding: EdgeInsets.all(rSize.defaultSpace),
+            child: rCartItemCheckout(),
+          ),
+        ],
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(rSize.defaultSpace),
         child:
             ElevatedButton(onPressed: () {Get.to(CheckoutView());}, child: Text("CheckOut \$25000")),
       ),
+      
+      
+      
     );
   }
 }

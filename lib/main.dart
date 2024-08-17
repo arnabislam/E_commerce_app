@@ -35,7 +35,9 @@ Future<void> main() async {
   );
 
   runApp(
+
     GetMaterialApp(
+
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       theme: rAppTheme.lightTheme,
@@ -44,6 +46,7 @@ Future<void> main() async {
       title: "Application",
       // initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
+
       home: Scaffold(
         backgroundColor: rColors.primary,
         body: const Center(

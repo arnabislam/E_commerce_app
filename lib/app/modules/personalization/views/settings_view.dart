@@ -1,4 +1,6 @@
+import 'package:e_commerce/app/data/repositories/authentication/authentication_demo.dart';
 import 'package:e_commerce/app/modules/address/views/address_view.dart';
+import 'package:e_commerce/app/modules/auth/views/login.dart';
 import 'package:e_commerce/app/modules/home/views/home_view.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/primaryHeader.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/widgets/customShape/r_circular_image.dart';
@@ -128,6 +130,16 @@ class SettingsView extends GetView {
                   title: 'Hd image Quality',
                   subtitle: 'Set image quality to be seen',
                   trailing: Switch(value: true, onChanged: (value) {}),
+                ),
+
+                 rSettingsmenuTile(
+                  icon: Icons.logout,
+                  title: 'Log Out',
+                  subtitle: 'you will go  login page',
+                  onTap: ()async{
+                  await  AuthenticationDemo().signOut();
+                    Get.to(Login());
+                  },
                 ),
               ],
             ),

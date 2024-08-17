@@ -5,6 +5,8 @@ import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
+import '../../home/views/navigation_menu_view.dart';
+
 class OnboardimgController extends GetxController {
   //TODO: Implement OnboardimgController
 
@@ -37,7 +39,7 @@ class OnboardimgController extends GetxController {
       print("Bangladesh next");
       print(storage.read("IsFirstTime"));
     }
-      Get.offAll(Login());
+      Get.offAll(NavigationMenuView());
     } else {
       int page = currentPageIndex.value + 1;
       pageController.jumpToPage(page);

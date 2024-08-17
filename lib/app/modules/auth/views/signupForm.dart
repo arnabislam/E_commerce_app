@@ -9,27 +9,42 @@ import '../controllers/signup_controller.dart';
 
 
 class SignupForm extends StatelessWidget {
-  const SignupForm({
+   SignupForm({
     super.key,
     required this.dark,
   });
 
   final bool dark;
+  GlobalKey<FormState> signupFormKey =
+  GlobalKey<FormState>();
+
+
+  // String email='',password='',firstName='',lastName='',userName='',phoneNumber='';
+   TextEditingController emailController = TextEditingController();
+   TextEditingController firstNameController = TextEditingController();
+   TextEditingController lastNameController = TextEditingController();
+   TextEditingController userNameController = TextEditingController();
+   TextEditingController phoneNumberController = TextEditingController();
+   TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(SignupController());
     return Form(
-      key: controller.signupFormKey,
+      key: signupFormKey,
       child: Column(
         children: [
           Row(
             children: [
               Expanded(
                 child: TextFormField(
-                  validator: (value) =>
-                      rValidator.emptyTextValidation('First Name', value),
-                  controller: controller.firstName,
+                  validator: (value){
+                    if(value==null || value.isEmpty){
+                      return "Please enter the name";
+                    }
+                    return null;
+                  },
+                  controller:firstNameController,
                   expands: false,
                   decoration: InputDecoration(
                       prefixIcon: Icon(
@@ -48,9 +63,13 @@ class SignupForm extends StatelessWidget {
               ),
               Expanded(
                 child: TextFormField(
-                  validator: (value) =>
-                      rValidator.emptyTextValidation('Last Name', value),
-                  controller: controller.lastName,
+                  validator: (value){
+                    if(value==null || value.isEmpty){
+                      return "Please enter the lastname";
+                    }
+                    return null;
+                  },
+                  controller: lastNameController,
                   expands: false,
                   decoration: InputDecoration(
                       prefixIcon: Icon(
@@ -72,10 +91,14 @@ class SignupForm extends StatelessWidget {
 
           const SizedBox(height: rSize.spaceBtwItems),
           TextFormField(
-            validator: (value) =>
-                rValidator.emptyTextValidation('Username', value),
+            validator: (value){
+              if(value==null || value.isEmpty){
+                return "Please enter the username";
+              }
+              return null;
+            },
             expands: false,
-            controller: controller.userName,
+            controller: userNameController,
             decoration: InputDecoration(
                 prefixIcon: Icon(
                   Icons.person_pin_outlined,
@@ -88,8 +111,13 @@ class SignupForm extends StatelessWidget {
           ),
           const SizedBox(height: rSize.spaceBtwItems),
           TextFormField(
-            validator: (value) => rValidator.validateEmail(value),
-            controller: controller.email,
+            validator: (value){
+              if(value==null || value.isEmpty){
+                return "Please enter the email";
+              }
+              return null;
+            },
+            controller: emailController,
             expands: false,
             decoration: InputDecoration(
                 prefixIcon: Icon(
@@ -103,8 +131,13 @@ class SignupForm extends StatelessWidget {
           ),
           const SizedBox(height: rSize.spaceBtwItems),
           TextFormField(
-            validator: (value) => rValidator.validatePhoneNumber(value),
-            controller: controller.phoneNumber,
+            validator: (value){
+              if(value==null || value.isEmpty){
+                return "Please enter the phoneNumber";
+              }
+              return null;
+            },
+            controller: phoneNumberController,
             expands: false,
             decoration: InputDecoration(
                 prefixIcon: Icon(
@@ -119,8 +152,13 @@ class SignupForm extends StatelessWidget {
           const SizedBox(height: rSize.spaceBtwItems),
           Obx(() {
             return TextFormField(
-              validator: (value) => rValidator.validatePassword(value),
-              controller: controller.password,
+              validator: (value){
+                if(value==null || value.isEmpty){
+                  return "Please enter the Paasssword";
+                }
+                return null;
+              },
+              controller: passwordController,
               expands: false,
               obscureText: controller.hidePassword.value,
               decoration: InputDecoration(

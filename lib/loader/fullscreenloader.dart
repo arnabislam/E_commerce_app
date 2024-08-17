@@ -8,8 +8,9 @@ class rFullScreenLoader {
   static void openLoadingDialog(String text, String animation) {
     showDialog(
         context: Get.overlayContext!,
-        barrierDismissible: false,//this dialog can't be dismissed by tapped it outside
-        builder: (_) => PopScope(
+        barrierDismissible:
+            false, //this dialog can't be dismissed by tapped it outside
+        builder: (BuildContext) => PopScope(
             canPop: false,
             child: Container(
               color: TheHelperFunctions.isDarkMode(Get.context, BuildContext)
@@ -19,9 +20,13 @@ class rFullScreenLoader {
               width: double.infinity,
               child: Column(
                 children: [
-                  SizedBox(height: 250,),
-                  rAnimationLoader(text: text, animation: animation, )
-
+                  SizedBox(
+                    height: 250,
+                  ),
+                  rAnimationLoader(
+                    text: text,
+                    animation: animation,
+                  )
                 ],
               ),
             )));
@@ -29,7 +34,8 @@ class rFullScreenLoader {
   //stop the open  current loading
 //the method doesn't return anything
 
-static stopLoading(){
-    Navigator.of(Get.overlayContext!).pop();//close the dialog open the navigator
-}
+  static stopLoading() {
+    Navigator.of(Get.overlayContext!)
+        .pop(); //close the dialog open the navigator
+  }
 }

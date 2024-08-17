@@ -7,7 +7,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../loader/loader.dart';
 import '../../../../utils/tsocialbutton.dart';
+import '../../../data/repositories/authentication/authentication_demo.dart';
+import '../../onboardimg/views/onboardimg_view.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -17,6 +20,40 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+
+  TextEditingController emailController = TextEditingController();
+
+  TextEditingController passwordController = TextEditingController();
+
+  bool isLoading=false;
+
+  void despose(){
+    super.dispose();
+    emailController.dispose();
+    passwordController.dispose();
+
+  }
+
+  void loginUsers() async {
+    String res = await AuthenticationDemo().loginUser(
+        email: emailController.text,
+        password: passwordController.text,
+       );
+
+    if (res ==
+        "Successfully") {
+      setState(() {
+       isLoading=true;
+      });
+      Get.to(OnboardimgView());
+    } else {
+      setState(() {
+        isLoading=false;
+      });
+      rLoaders.successSnackBar(title: res, message: "Thanks");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final dark = TheHelperFunctions.isDarkMode(BuildContext, context);
@@ -64,6 +101,7 @@ class _LoginState extends State<Login> {
                 child: Column(
                   children: [
                     TextFormField(
+                      controller: emailController,
                       decoration:  InputDecoration(
                           prefixIcon: Icon(Icons.email), labelText: "Email",labelStyle: TextStyle(color: dark?Colors.white:Colors.black)),
                    style: TextStyle(color: dark?Colors.white:Colors.black), ),
@@ -71,6 +109,7 @@ class _LoginState extends State<Login> {
                       height: rSize.spaceBtwInputFields,
                     ),
                     TextFormField(
+                      controller: passwordController,
                       decoration: InputDecoration(
                           prefixIcon: Icon(Icons.remove_red_eye),
                           labelText: "Password",labelStyle: TextStyle(color: dark?Colors.white:Colors.black)),
@@ -103,9 +142,7 @@ class _LoginState extends State<Login> {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                          onPressed: () {
-                            Get.to(NavigationMenuView());
-                          }, child: Text("SignIn")),
+                          onPressed: loginUsers, child: Text("SignIn")),
                     ),
                     const SizedBox(
                       height: rSize.spaceBtwItems,

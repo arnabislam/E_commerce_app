@@ -20,6 +20,7 @@ class VerifyEmailView extends GetView {
           ],
         ),
         body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
           child: Padding(
             padding: const EdgeInsets.all(rSize.defaultSpace),
             child: Column(
