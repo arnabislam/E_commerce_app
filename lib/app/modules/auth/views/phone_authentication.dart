@@ -18,41 +18,49 @@ class _PhoneAuthenticationState extends State<PhoneAuthentication> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Phone number auth"),
+        title: Text("Phone number authenticate"),
         centerTitle: true,
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          TextField(
-            controller: phoneContorller,
-            keyboardType: TextInputType.number,
-            decoration: InputDecoration(
-                hintText: 'Enter Phone Number',
-                suffixIcon: Icon(Icons.phone),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(24),
-                )),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              controller: phoneContorller,
+
+              decoration: InputDecoration(
+                  hintText: 'Enter Phone Number',
+                  suffixIcon: Icon(Icons.phone),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(24),
+                  )),
+            ),
           ),
           const SizedBox(
             height: 15,
           ),
-          ElevatedButton(
-              onPressed: () async {
-                await FirebaseAuth.instance.verifyPhoneNumber(
-                    verificationCompleted: (PhoneAuthCredential credential) {},
-                    verificationFailed: (FirebaseAuthException ex) {},
-                    codeSent: (String verificationid, int? resendtoken) {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => OtpScreen(
-                                    verificationid: verificationid,
-                                  )));
-                    },
-                    codeAutoRetrievalTimeout: (String verificationId) {},
-                    phoneNumber: phoneContorller.text.toString());
-              },
-              child: const Text("verify phone"))
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+
+                onPressed: () async {
+                  await FirebaseAuth.instance.verifyPhoneNumber(
+                      verificationCompleted: (PhoneAuthCredential credential) {},
+                      verificationFailed: (FirebaseAuthException ex) {},
+                      codeSent: (String verificationid, int? resendtoken) {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => OtpScreen(
+                                      verificationid: verificationid,
+                                    )));
+                      },
+                      codeAutoRetrievalTimeout: (String verificationId) {},
+                      phoneNumber: phoneContorller.text.toString());
+                },
+                child: const Text("verify phone")),
+          )
         ],
       ),
     );

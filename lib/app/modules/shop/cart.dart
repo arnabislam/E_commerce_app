@@ -27,7 +27,7 @@ class CartScreen extends StatelessWidget {
         children: [
           //colum bad ditey hobey
           StreamBuilder(
-            stream: FirebaseFirestore.instance.collection("frick").snapshots(),
+            stream: FirebaseFirestore.instance.collection("users").snapshots(),
             builder: (BuildContext context, AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>> snapshot) {
               if(snapshot.hasError){
                 return Center(child: CircularProgressIndicator(),);
@@ -35,17 +35,21 @@ class CartScreen extends StatelessWidget {
               if(snapshot.connectionState== ConnectionState.waiting){
                 return Center(child: CircularProgressIndicator(),);
               }
-              return ListView.builder(
-                  shrinkWrap: true,
-                  primary: false,
-                  itemCount: snapshot.data!.docs.length,
-                  itemBuilder: (context,index){
-                    var doc = snapshot.data!.docs[index];
-                    return Text(doc['name']);
-                  });
+              return Container(
+                height: 125,
+                child: ListView.builder(
+                    shrinkWrap: true,
+                    primary: false,
+                    itemCount: snapshot.data!.docs.length,
+                    itemBuilder: (context,index){
+                      var doc = snapshot.data!.docs[index];
+                      return Text(doc
+                      ['firstName']);
+                    }),
+              );
             },
           ),
-          
+
           const Padding(
             padding: EdgeInsets.all(rSize.defaultSpace),
             child: rCartItemCheckout(),
@@ -57,9 +61,9 @@ class CartScreen extends StatelessWidget {
         child:
             ElevatedButton(onPressed: () {Get.to(CheckoutView());}, child: Text("CheckOut \$25000")),
       ),
-      
-      
-      
+
+
+
     );
   }
 }

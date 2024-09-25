@@ -1,6 +1,7 @@
 import 'package:e_commerce/app/data/repositories/authentication/authentication_demo.dart';
 import 'package:e_commerce/app/modules/auth/views/phone_authentication.dart';
 import 'package:e_commerce/app/modules/auth/views/signupForm.dart';
+import 'package:e_commerce/app/modules/auth/views/verify_email_view.dart';
 import 'package:e_commerce/app/modules/onboardimg/views/onboardimg_view.dart';
 import 'package:e_commerce/constant/colors.dart';
 import 'package:e_commerce/device/helper_function.dart';
@@ -10,6 +11,8 @@ import 'package:e_commerce/utils/tsocialbutton.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../../utils/rValidator.dart';
 
 class SignupView extends StatefulWidget {
   const SignupView({Key? key}) : super(key: key);
@@ -96,12 +99,12 @@ class _SignupViewState extends State<SignupView> {
       setState(() {
         isLaoding = true;
       });
-      Get.to(OnboardimgView());
+      Get.to(PhoneAuthentication());
     } else {
       setState(() {
         isLaoding = false;
       });
-      rLoaders.successSnackBar(title: res, message: "Thanks");
+      rLoaders.successSnackBar(title: "errur occured", );
     }
   }
   Widget build(BuildContext context) {
@@ -141,7 +144,7 @@ class _SignupViewState extends State<SignupView> {
                               if (value == null || value.isEmpty) {
                                 return "Please enter the name";
                               }
-                              return null;
+                              return "null";
                             },
                             controller: firstNameController,
                             expands: false,
@@ -163,12 +166,7 @@ class _SignupViewState extends State<SignupView> {
                         ),
                         Expanded(
                           child: TextFormField(
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return "Please enter the lastname";
-                              }
-                              return null;
-                            },
+                            validator: (value)=>  rValidator.emptyTextValidation('First Name', value),
                             controller: lastNameController,
                             expands: false,
                             decoration: InputDecoration(
@@ -301,7 +299,8 @@ class _SignupViewState extends State<SignupView> {
 
               SizedBox(height: rSize.spaceBtwSections),
 
-              SizedBox(
+              Container(
+
                   width: double.infinity,
                   child: ElevatedButton(
                       onPressed: signUpUser,
